@@ -1,0 +1,29 @@
+{
+  "name": "image-gallery",
+  "version": "0.1.0",
+  "description": "Lazy-loading image gallery React component",
+  "scripts": {
+    "build": "tsup --entry.index src/ImageGallery.js --format cjs,esm --loader \".js=jsx\" --external react --clean",
+    "prepare": "npm run build"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "react": "^19.3.0",
+    "tsup": "^8.5.1",
+    "typescript": "^7.0.2"
+  },
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "files": [
+    "dist"
+  ],
+  "peerDependencies": {
+    "react": ">=18"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  }
+}
